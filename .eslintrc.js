@@ -36,6 +36,12 @@ module.exports = {
     'vue/no-multiple-template-root': 0,
     // nuxt settings
     'nuxt/no-globals-in-created': 0,
-    'nuxt/no-env-in-hooks': 0
+    'nuxt/no-env-in-hooks': 0,
+    'ban-ts-comment': {
+      'ts-expect-error': 'allow-with-description',
+      'ts-ignore': false,
+      'ts-nocheck': false,
+      'ts-check': true
+    }
   }
 }

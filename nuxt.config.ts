@@ -1,5 +1,6 @@
-import { defineNuxtConfig } from 'nuxt3'
+// @ts-nocheck
 import vuetify from '@vuetify/vite-plugin'
+import { defineNuxtConfig } from 'nuxt3'
 
 declare module 'vite' {
   interface UserConfig {
@@ -33,9 +34,7 @@ export default defineNuxtConfig({
           )
           if (~vuetifyIdx && vuetifyIdx < vueIdx) {
             const vuetifyPlugin = config.plugins[vuetifyIdx]
-            // @ts-ignore
             config.plugins.splice(vuetifyIdx, 1)
-            // @ts-ignore
             config.plugins.splice(vueIdx, 0, vuetifyPlugin)
           }
         }
